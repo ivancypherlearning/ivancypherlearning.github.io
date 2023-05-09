@@ -1,0 +1,14 @@
+header {
+    background-color: #ed0707 !important;
+    color: #fff !important;
+}
+
+.portal footer {
+    display: none !important;
+}
+
+a._processed {
+    background-color: #ed0707 !important;
+    color: #fff !important;
+    font-weight: bold;
+}
