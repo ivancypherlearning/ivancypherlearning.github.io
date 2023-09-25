@@ -254,6 +254,15 @@
     });
   });
 
+  /*
+  * Autoplay video
+  */
+
+  const video_grupo_distelsa = document.getElementById('video_grupo');
+  video_grupo_distelsa.autoplay = true;
+  video_grupo_distelsa.loop = true;
+  video_grupo_distelsa.load();
+
   /**
    * Initiate Pure Counter 
    */
