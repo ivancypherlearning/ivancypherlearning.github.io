@@ -45,6 +45,8 @@
                         </span>
                         <h2 class="text-dark mb-0">
                             A continuación podrá ver todo el recorrido que tendrá la ruta.
+                            <br>
+                            {{ url_parent }}
                         </h2>
                     </div>
                 </div>
@@ -207,6 +209,7 @@
             date_now: '',
             data_path: [],
             tipe_role: '',
+            url_parent: '',
         },
         mounted: function () {
             this.mostrar_saludo();
@@ -228,6 +231,7 @@
                 }
             },
             cargar_fecha_ahora: function () {
+                this.url_parent = window.parent.location.href;
                 this.date_now = new Date().getFullYear();
             },
             get_data_ruta: function () {
@@ -237,7 +241,6 @@
                     });
             },
             get_data_tipe_role: function () {
-                alert(window.parent.location.href);
                 if (window.parent.location.href.includes('teacher_custom')) {
                     this.tipe_role = 1;
                 } else {
