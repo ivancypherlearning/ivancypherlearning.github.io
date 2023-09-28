@@ -237,11 +237,9 @@
                     });
             },
             get_data_tipe_role: function () {
-                if (window.parent.location.href.includes('teacher_custom')) {
-                    this.tipe_role = 1;
-                } else {
-                    this.tipe_role = 2;
-                }
+                const queryString = window.location.search;
+                const urlParams = new URLSearchParams(queryString);
+                this.tipe_role = urlParams.get('role');
             },
             get_data_name_path: function () {
                 axios.get('https://raw.githubusercontent.com/ivancypherlearning/ivancypherlearning.github.io/main/data_name.json')
