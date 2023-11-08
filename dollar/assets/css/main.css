@@ -757,7 +757,7 @@ section {
 
 .post-content .firstcharacter {
     float: left;
-    font-family: Georgia;
+    font-family: var(--font-default);
     font-size: 75px;
     line-height: 60px;
     padding-top: 4px;
